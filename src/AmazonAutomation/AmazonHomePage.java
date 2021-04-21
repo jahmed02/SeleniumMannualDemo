@@ -19,6 +19,8 @@ public class AmazonHomePage {
         driver.get("https://www.amazon.com/");
         driver.manage().window().maximize();
         driver.findElement(By.id("twotabsearchtextbox")).sendKeys("Books" , Keys.ENTER);
-        driver.close();
+        driver.findElement(By.id("twotabsearchtextbox")).clear();
+        driver.findElement(By.id("twotabsearchtextbox")).sendKeys("Honey" , Keys.ENTER);
+        driver.close();   // driver.quit(); will terminate all the open windows
     }
 }
